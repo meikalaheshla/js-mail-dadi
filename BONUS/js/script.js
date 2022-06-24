@@ -22,4 +22,37 @@ validateButton.addEventListener('click', function () {
 })
 
 
+// -----------------------------------------------------------
+
+
+// DADI
+
+
+const diceRoller = document.getElementById('dice-roller');
+const userResult = document.getElementById('user-result');
+const cpuResult = document.getElementById('cpu-result');
+const resultBanner = document.getElementById('disclaimer');
+
+
+diceRoller.addEventListener('click', function () {
+
+    const cpuNumber = Math.round(Math.random() * 5 + 1);
+    const userNumber = Math.round(Math.random() * 5 + 1);
+    userResult.innerText = `IL TUO NUMERO É ${userNumber}`
+    cpuResult.innerText = `IL NUMERO DEL CPU É ${cpuNumber}`
+
+    if (cpuNumber > userNumber) {
+        resultBanner.innerText = `HAI PERSO `
+
+    } else if (cpuNumber < userNumber) {
+        resultBanner.innerText = `HAI VINTO `
+
+    } else {
+        resultBanner.innerText = `PAREGGIO `
+
+    }
+})
+
+
+
 
