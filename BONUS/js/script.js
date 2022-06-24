@@ -5,10 +5,21 @@
 // MAIL
 
 const autorizedMails = ['boolean@1.com', 'boolean@2.com', 'boolean@3.com', 'boolean@4.com', 'boolean@5.com'];
-const userMail = prompt('Inserire mail Autorizzata', 'boolean@1.com');
+const userMailPanel = document.getElementById('user-mail')
+const validateButton = document.getElementById('validate-button')
+const confirmAlert = document.getElementById('confirm-message')
 
-if (autorizedMails.includes(userMail)) {
-    console.log('Benvenuto');
-} else {
-    console.log('Spiacenti');
-}
+validateButton.addEventListener('click', function () {
+    const mailValue = userMailPanel.value
+
+
+    if (autorizedMails.includes(mailValue)) {
+        confirmAlert.innerText = `ACCESSO AUTORIZZATO`
+    } else {
+        confirmAlert.innerText = `ACCESSO NEGATO`
+    }
+
+})
+
+
+
