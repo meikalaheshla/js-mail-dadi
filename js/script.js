@@ -23,15 +23,33 @@
 
 
 // MAIL
+console.log('MAIL')
 
-const autorizedMails = ['boolean@1.com', 'boolean@2.com', 'boolean@3.com', 'boolean@4.com', 'boolean@5.com']
-const userMail = prompt('Inserire mail Autorizzata', 'boolean@1.com')
+const autorizedMails = ['boolean@1.com', 'boolean@2.com', 'boolean@3.com', 'boolean@4.com', 'boolean@5.com'];
+const userMail = prompt('Inserire mail Autorizzata', 'boolean@1.com');
 
 if (autorizedMails.includes(userMail)) {
-    console.log('Benvenuto')
+    console.log('Benvenuto');
 } else {
-    console.log('Spiacenti')
+    console.log('Spiacenti');
 }
+console.log('-----------------------------------------------------------------------------------------------------')
+console.log('DADI')
+
+// DADI
+const cpuNumber = Math.round(Math.random() * 5 + 1);
+const userNumber = Math.round(Math.random() * 5 + 1);
+console.log(`IL COMPUTER HA LANCIATO UN DATO E HA FATTO ${cpuNumber}`)
+console.log(`HAI LANCIATO UN DADO E HAI FATTO ${userNumber}`)
+
+if (cpuNumber > userNumber) {
+    console.log('YOU LOSE')
+} else if (cpuNumber < userNumber) {
+    console.log('YOU WIN')
+} else {
+    console.log('DRAW')
+}
+
 
 
 
